@@ -21,10 +21,13 @@ import javafx.scene.text.TextFlow;
 
 public class Main extends Application {
     //pour la taille de la scene
-    private final static int WIDTH = 1280;
-    private final static int HEIGHT = 720;
+    private final static int SCENE_WIDTH = 1280;
+    private final static int SCENE_HEIGHT = 720;
+    private final static int BUTTON_WIDTH = 150;
+    private final static int BUTTON_HEIGHT = 75;
 
-    //pour le handler event
+
+            //pour le handler event
     Text t = new Text(550, 100, "");
 
     //pour les boutons en gras
@@ -57,7 +60,7 @@ public class Main extends Application {
         start.setLayoutX(200);
         start.setLayoutY(200);
 
-        start.setPrefSize(150, 75);         //taille du bouton
+        start.setPrefSize(BUTTON_WIDTH, BUTTON_HEIGHT);         //taille du bouton
         start.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -93,19 +96,19 @@ public class Main extends Application {
         //----------------------SETTINGS BUTTON----------------------
         settings.setLayoutX(200);
         settings.setLayoutY(300);
-        settings.setPrefSize(150, 75);
+        settings.setPrefSize(BUTTON_WIDTH, BUTTON_HEIGHT);
 
         //-----------------------CREDITS BUTTON----------------------
         credits.setLayoutX(200);
         credits.setLayoutY(400);
-        credits.setPrefSize(150, 75);
+        credits.setPrefSize(BUTTON_WIDTH, BUTTON_HEIGHT);
 
         //pour afficher dans le root les boutons
         root.getChildren().addAll(start, settings, credits, t, test);
 
 
         //création de la page (la "scene") de taille final
-        Scene scene = new Scene(root, WIDTH, HEIGHT);
+        Scene scene = new Scene(root, SCENE_WIDTH, SCENE_HEIGHT);
         primaryStage.setResizable(false); //impossible de changer la taille de l'appli
         primaryStage.setScene(scene); //on ajoute la scene
         //primaryStage.setAlwaysOnTop(true); //qui sert à afficher en foreground du pc l'appli, inutile pour l'instant (peut-être jamais)
