@@ -39,6 +39,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Hello World!");
 
+        Button test = new Button("test"); test.setLayoutX(200); test.setLayoutY(200); test.setVisible(false); test.setDisable(true);
         Button start = new Button("START GAME");
         Button settings = new Button("SETTINGS");
         Button credits = new Button("CREDITS");
@@ -52,8 +53,6 @@ public class Main extends Application {
         Pane root = new Pane();
         // ------------------------START BUTTON----------------------
 
-
-
         //endroit où sera situé le bouton
         start.setLayoutX(200);
         start.setLayoutY(200);
@@ -65,10 +64,28 @@ public class Main extends Application {
                 t.setText("This is a test");
                 t.setFont(Font.font("Arial" ,FontWeight.BOLD, 40));
                 t.setStyle("-fx-font-weight: bold");
+                t.setVisible(true);
 
+                test.setVisible(true);
+                test.setDisable(false);
                 for (Button b : buttons) {
                     b.setDisable(true);
                     b.setVisible(false);
+                }
+
+
+            }
+        });
+        test.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                test.setVisible(false);
+                test.setDisable(true);
+                t.setVisible(false);
+
+                for (Button b : buttons) {
+                    b.setDisable(false);
+                    b.setVisible(true);
                 }
             }
         });
@@ -84,7 +101,7 @@ public class Main extends Application {
         credits.setPrefSize(150, 75);
 
         //pour afficher dans le root les boutons
-        root.getChildren().addAll(start, settings, credits, t);
+        root.getChildren().addAll(start, settings, credits, t, test);
 
 
         //création de la page (la "scene") de taille final
