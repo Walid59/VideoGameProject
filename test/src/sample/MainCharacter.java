@@ -3,12 +3,13 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.scene.Group;
+import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.scene.image.Image;
 import javafx.util.Duration;
 
-import java.awt.event.ActionEvent;
+import java.io.IOException;
 
 public class MainCharacter extends Application {
     final static Image DROITE = new Image(MainCharacter.class.getResource("/../res/character/droite.png").toString());
@@ -26,7 +27,9 @@ public class MainCharacter extends Application {
 
     private Group characterLeft, characterRight, characterJumping, charUpRight, charUpLeft;
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage stage) throws IOException {
+        stage.setScene(new Scene(characterRight,600,400));
+        stage.show();
 
         final ImageView charLeft1 = new ImageView(GAUCHE);
         final ImageView charLeft2 = new ImageView(GAUCHE2);
@@ -66,27 +69,27 @@ public class MainCharacter extends Application {
 
 
         runLeft.getKeyFrames().add(
-                new KeyFrame(Duration.millis(200), (ActionEvent event) -> {
+                new KeyFrame(Duration.millis(200), (event) -> {
                     characterLeft.getChildren().setAll(charLeft2);
                 }
         ));
-/*
+
         jumpUpLeft.getKeyFrames().add(new KeyFrame(
-                Duration.millis(200),(ActionEvent event) -> {charUpLeft.getChildren().setAll(charJumpLeft2);}
+                Duration.millis(200),( event) -> {charUpLeft.getChildren().setAll(charJumpLeft2);}
         ));
 
         jump.getKeyFrames().add(new KeyFrame(
-                Duration.millis(200),(ActionEvent event) -> {characterJumping.getChildren().setAll(charJumping2);}
+                Duration.millis(200),( event) -> {characterJumping.getChildren().setAll(charJumping2);}
         ));
 
         jumpUpRight.getKeyFrames().add(new KeyFrame(
-                Duration.millis(200),(ActionEvent event) -> {charUpRight.getChildren().setAll(charJumpRight2);}
+                Duration.millis(200),( event) -> {charUpRight.getChildren().setAll(charJumpRight2);}
         ));
 
         runRight.getKeyFrames().add(new KeyFrame(
-                Duration.millis(200),(ActionEvent event) -> {characterRight.getChildren().setAll(charRight2);}
+                Duration.millis(200),( event) -> {characterRight.getChildren().setAll(charRight2);}
         ));
 
- */
+        runRight.play();
     }
 }

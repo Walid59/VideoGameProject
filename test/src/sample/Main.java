@@ -1,9 +1,12 @@
 package sample;
 
+import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.scene.control.Button;
 import javafx.scene.text.FontWeight;
@@ -13,7 +16,7 @@ import javafx.scene.text.Font;
 import javafx.scene.transform.Translate;
 import javafx.scene.Node;
 import javafx.scene.text.TextFlow;
-
+import javafx.animation.KeyFrame;
 
 
 
@@ -25,8 +28,7 @@ public class Main extends Application {
     private final static int BUTTON_WIDTH = 150;
     private final static int BUTTON_HEIGHT = 75;
 
-
-            //pour le handler event
+    //pour le handler event
     Text t = new Text(550, 100, "");
 
     //pour les boutons en gras
@@ -74,10 +76,12 @@ public class Main extends Application {
                     b.setDisable(true);
                     b.setVisible(false);
                 }
-
+                MainCharacter c = new MainCharacter();
 
             }
         });
+
+
         test.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
