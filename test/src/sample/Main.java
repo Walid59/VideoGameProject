@@ -12,7 +12,6 @@ import javafx.scene.text.Text;
 import javafx.scene.text.Font;
 import javafx.scene.transform.Translate;
 import javafx.scene.Node;
-import javafx.scene.text.FontWeight;
 import javafx.scene.text.TextFlow;
 
 
@@ -43,8 +42,8 @@ public class Main extends Application {
         primaryStage.setTitle("Hello World!");
 
         Button test = new Button("test"); test.setLayoutX(200); test.setLayoutY(200); test.setVisible(false); test.setDisable(true);
-        Button start = new Button("START GAME");
-        Button settings = new Button("SETTINGS");
+        Button start = new Button("JOUER");
+        Button settings = new Button("PARAMETRES");
         Button credits = new Button("CREDITS");
         Button[] buttons = {start, settings, credits};
 

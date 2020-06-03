@@ -204,10 +204,10 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="82" key="#com.intellij.ide.util.MemberChooser" timestamp="1591022533633">
+    <state x="488" y="82" key="#com.intellij.ide.util.MemberChooser" timestamp="1591200465478">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="488" y="82" key="#com.intellij.ide.util.MemberChooser/0.0.1366.736@0.0.1366.736" timestamp="1591022533633" />
+    <state x="488" y="82" key="#com.intellij.ide.util.MemberChooser/0.0.1366.736@0.0.1366.736" timestamp="1591200465478" />
     <state width="1323" height="180" key="GridCell.Tab.0.bottom" timestamp="1591107815710">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
@@ -224,13 +224,17 @@
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state width="1323" height="180" key="GridCell.Tab.0.right/0.0.1366.736@0.0.1366.736" timestamp="1591107815710" />
-    <state x="379" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1591104879134">
+    <state x="379" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1591199979298">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="379" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.736@0.0.1366.736" timestamp="1591104879133" />
+    <state x="379" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.736@0.0.1366.736" timestamp="1591199979298" />
     <state x="65" y="0" key="new project wizard" timestamp="1591045330995">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state x="65" y="0" key="new project wizard/0.0.1366.736@0.0.1366.736" timestamp="1591045330995" />
+    <state x="339" y="164" key="run.anything.popup" timestamp="1591202801967">
+      <screen x="0" y="0" width="1366" height="736" />
+    </state>
+    <state x="339" y="164" key="run.anything.popup/0.0.1366.736@0.0.1366.736" timestamp="1591202801967" />
   </component>
 </project>
