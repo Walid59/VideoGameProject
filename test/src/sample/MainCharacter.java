@@ -34,6 +34,7 @@ public class MainCharacter extends Application {
         final ImageView charLeft1 = new ImageView(GAUCHE);
         final ImageView charLeft2 = new ImageView(GAUCHE2);
 
+        /*
         final ImageView charJumpLeft1 = new ImageView(SAUT_GAUCHE1);
         final ImageView charJumpLeft2 = new ImageView(SAUT_GAUCHE2);
 
@@ -45,16 +46,18 @@ public class MainCharacter extends Application {
 
         final ImageView charJumpRight1 = new ImageView(SAUT_DROIT1);
         final ImageView charJumpRight2 = new ImageView(SAUT_DROIT2);
-
+*/
         characterLeft = new Group(charLeft1);
-        characterRight = new Group(charRight1);
+       /* characterRight = new Group(charRight1);
         characterJumping =new Group(charJumping1);
         charUpRight =new Group(charJumpRight1);
         charUpLeft =new Group(charJumpLeft1);
-
+*/
+       characterLeft.setTranslateX(150);
+       characterLeft.setTranslateY(500);
         Timeline runLeft = new Timeline();
         runLeft.setCycleCount(Timeline.INDEFINITE);
-
+/*
         Timeline jumpUpLeft = new Timeline();
         jumpUpLeft.setCycleCount(Timeline.INDEFINITE);
 
@@ -66,14 +69,14 @@ public class MainCharacter extends Application {
 
         Timeline runRight = new Timeline();
         runRight.setCycleCount(Timeline.INDEFINITE);
-
+*/
 
         runLeft.getKeyFrames().add(
                 new KeyFrame(Duration.millis(200), (event) -> {
                     characterLeft.getChildren().setAll(charLeft2);
                 }
         ));
-
+/*
         jumpUpLeft.getKeyFrames().add(new KeyFrame(
                 Duration.millis(200),( event) -> {charUpLeft.getChildren().setAll(charJumpLeft2);}
         ));
@@ -91,5 +94,7 @@ public class MainCharacter extends Application {
         ));
 
         runRight.play();
+
+ */
     }
 }

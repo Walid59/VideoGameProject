@@ -35,6 +35,7 @@ public class Main extends Application {
     TextFlow flow = new TextFlow();
 
     public static void main(String[] args) {
+        Application.launch(args);
         launch(args);
     }
 
@@ -76,7 +77,6 @@ public class Main extends Application {
                     b.setDisable(true);
                     b.setVisible(false);
                 }
-                MainCharacter c = new MainCharacter();
 
             }
         });
