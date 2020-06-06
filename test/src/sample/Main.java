@@ -19,14 +19,20 @@ import javafx.scene.text.TextFlow;
 import javafx.animation.KeyFrame;
 
 
-
-
 public class Main extends Application {
     //pour la taille de la scene
-    private final static int SCENE_WIDTH = 1280;
-    private final static int SCENE_HEIGHT = 720;
-    private final static int BUTTON_WIDTH = 150;
-    private final static int BUTTON_HEIGHT = 75;
+    private final static int SCENE_WIDTH = 1000;
+
+    public static int getSceneWidth() {
+        return SCENE_WIDTH;
+    }
+
+    public static int getSceneHeight() {
+        return SCENE_HEIGHT;
+    }
+
+    private final static int SCENE_HEIGHT = 600;
+
 
     //pour le handler event
     Text t = new Text(550, 100, "");
@@ -42,27 +48,23 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        primaryStage.setTitle("Hello World!");
+        primaryStage.setTitle("Boumaragame");
 
         Button test = new Button("test"); test.setLayoutX(200); test.setLayoutY(200); test.setVisible(false); test.setDisable(true);
-        Button start = new Button("JOUER");
-        Button settings = new Button("PARAMETRES");
-        Button credits = new Button("CREDITS");
+        Button start = new MainMenuButton("JOUER");
+        Button settings = new MainMenuButton("PARAMETRES");
+        Button credits = new MainMenuButton("CREDITS");
         Button[] buttons = {start, settings, credits};
 
-        for(Button b : buttons){
-        b.setFont(Font.font("Arial", FontWeight.BOLD, 18));
-    }
 
 
         Pane root = new Pane();
         // ------------------------START BUTTON----------------------
 
         //endroit où sera situé le bouton
-        start.setLayoutX(200);
+        start.setLayoutX((getSceneWidth() / 2) - (MainMenuButton.getButtonWidth() / 2));
         start.setLayoutY(200);
 
-        start.setPrefSize(BUTTON_WIDTH, BUTTON_HEIGHT);         //taille du bouton
         start.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -77,7 +79,6 @@ public class Main extends Application {
                     b.setDisable(true);
                     b.setVisible(false);
                 }
-
             }
         });
 
@@ -97,14 +98,11 @@ public class Main extends Application {
         });
 
         //----------------------SETTINGS BUTTON----------------------
-        settings.setLayoutX(200);
+        settings.setLayoutX((getSceneWidth() / 2) - (MainMenuButton.getButtonWidth() / 2));
         settings.setLayoutY(300);
-        settings.setPrefSize(BUTTON_WIDTH, BUTTON_HEIGHT);
-
         //-----------------------CREDITS BUTTON----------------------
-        credits.setLayoutX(200);
+        credits.setLayoutX((getSceneWidth() / 2) - (MainMenuButton.getButtonWidth() / 2));
         credits.setLayoutY(400);
-        credits.setPrefSize(BUTTON_WIDTH, BUTTON_HEIGHT);
 
         //pour afficher dans le root les boutons
         root.getChildren().addAll(start, settings, credits, t, test);
