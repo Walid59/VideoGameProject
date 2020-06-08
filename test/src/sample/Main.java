@@ -1,22 +1,19 @@
 package sample;
 
-import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.layout.Pane;
 import javafx.scene.control.Button;
+import javafx.scene.paint.Color;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.scene.text.Text;
 import javafx.scene.text.Font;
-import javafx.scene.transform.Translate;
-import javafx.scene.Node;
 import javafx.scene.text.TextFlow;
-import javafx.animation.KeyFrame;
+
 
 
 public class Main extends Application {
@@ -41,7 +38,6 @@ public class Main extends Application {
     TextFlow flow = new TextFlow();
 
     public static void main(String[] args) {
-        Application.launch(args);
         launch(args);
     }
 
@@ -59,6 +55,8 @@ public class Main extends Application {
 
 
         Pane root = new Pane();
+        //root.setStyle("-fx-background-color: black;");
+
         // ------------------------START BUTTON----------------------
 
         //endroit où sera situé le bouton
@@ -96,7 +94,6 @@ public class Main extends Application {
                 }
             }
         });
-
         //----------------------SETTINGS BUTTON----------------------
         settings.setLayoutX((getSceneWidth() / 2) - (MainMenuButton.getButtonWidth() / 2));
         settings.setLayoutY(300);
@@ -110,10 +107,11 @@ public class Main extends Application {
 
         //création de la page (la "scene") de taille final
         Scene scene = new Scene(root, SCENE_WIDTH, SCENE_HEIGHT);
+
+
         primaryStage.setResizable(false); //impossible de changer la taille de l'appli
         primaryStage.setScene(scene); //on ajoute la scene
         //primaryStage.setAlwaysOnTop(true); //qui sert à afficher en foreground du pc l'appli, inutile pour l'instant (peut-être jamais)
         primaryStage.show();
     }
-
 }
