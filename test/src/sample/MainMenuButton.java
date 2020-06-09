@@ -5,18 +5,17 @@ import javafx.scene.control.Button;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
+import java.awt.*;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.util.Vector;
 
 public class MainMenuButton extends Button {
 
 
-
-//    private static Vector buttons = new Vector();
     private final static int BUTTON_WIDTH = 267;
     private final static int BUTTON_HEIGHT = 87;
 
@@ -27,17 +26,13 @@ public class MainMenuButton extends Button {
     public static int getButtonHeight() {
         return BUTTON_HEIGHT;
     }
-/*
-    public static Vector getButtons() {
-        return buttons;
-    }
 
-
- */
     private final String FONT_PATH = "src/res/MenuButton/yoster.ttf";
     private final String BUTTON_PATH = "-fx-background-image: url('/res/MenuButton/testbutton2.png');";
     private final String BUTTON_PRESSED_PATH = "-fx-background-image: url('/res/MenuButton/testbutton.png');";
 
+    //pour l'effet ombre de la souris
+    DropShadow ombre = new DropShadow();
 
     public MainMenuButton(String text){
         setText(text);
@@ -85,28 +80,17 @@ public class MainMenuButton extends Button {
             }
         });
 
-        setOnMouseEntered(event -> setEffect(new DropShadow()));
+        setOnMouseEntered(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                    setEffect(ombre);
+                    ombre.setColor(Color.WHITE);
+            }
+        });
+
 
         setOnMouseExited(event -> setEffect(null));
 
     }
 
-/*
-    public Button getStart() {
-        return start;
-    }
-
-    public Button getSettings() {
-        return settings;
-    }
-
-    public Button getCredits() {
-        return credits;
-    }
-
-    Button start = new MainMenuButton("JOUER");
-    Button settings = new MainMenuButton("PARAMETRES");
-    Button credits = new MainMenuButton("CREDITS");
-
- */
 }
