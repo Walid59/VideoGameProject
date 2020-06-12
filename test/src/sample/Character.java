@@ -10,7 +10,7 @@ import javafx.util.Duration;
 
 
 public class Character extends Pane{
-    Image marioImg = new Image(getClass().getResourceAsStream("mario.png"));
+    Image marioImg = new Image(getClass().getResourceAsStream("/res/Game/mario.png"));
     ImageView imageView = new ImageView(marioImg); //pour accéder à l'image avec les perso
     int count = 3; //+ count est élevé, + l'amplitude des gestes est grande
     int columns = 3; ///doit être ai dessis de 3

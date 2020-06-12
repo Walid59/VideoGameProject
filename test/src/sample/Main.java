@@ -19,6 +19,7 @@ import javafx.scene.text.TextFlow;
 public class Main extends Application {
     //attributs
     public static Pane root = new Pane();
+    private static Scene scene;
 
     //pour la taille de la scene
     private final static int SCENE_WIDTH = 900;
@@ -33,8 +34,8 @@ public class Main extends Application {
         return SCENE_HEIGHT;
     }
 
-    public static void main(String[] args) {
-        launch(args);
+    public static Scene getScene(){
+        return scene;
     }
 
     @Override
@@ -43,12 +44,15 @@ public class Main extends Application {
         root.setStyle("-fx-background-color: black;");
 
         //création de la page (la "scene") de taille final
-    Scene scene = new Scene(root, SCENE_WIDTH, SCENE_HEIGHT);
+     scene = new Scene(root, SCENE_WIDTH, SCENE_HEIGHT);
 
         primaryStage.setResizable(false); //impossible de changer la taille de l'appli
         primaryStage.setScene(scene); //on ajoute la scene
     //primaryStage.setAlwaysOnTop(true); //qui sert à afficher en foreground du pc l'appli, inutile pour l'instant (peut-être jamais)
         primaryStage.show();
         Menu.startMenu();
+    }
+    public static void main(String[] args) {
+        launch(args);
     }
 }

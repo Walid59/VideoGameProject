@@ -90,7 +90,6 @@ public class MainMenuButton extends Button {
 
 
         setOnMouseExited(event -> setEffect(null));
-
     }
 
 }

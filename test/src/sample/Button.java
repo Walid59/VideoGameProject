@@ -6,7 +6,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
 public class Button extends Pane {
-    Image buttonimg = new Image(getClass().getResourceAsStream("1.png"));
+    Image buttonimg = new Image(getClass().getResourceAsStream("/res/Game/1.png"));
     ImageView button;
     boolean eteint = true;
 

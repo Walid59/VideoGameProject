@@ -18,12 +18,12 @@ import java.util.HashMap;
 //import static sample.mario.Button.ButtonType.ETEINT;
 
 
-public class Game extends Application {
-    public static ArrayList<Block> platforms = new ArrayList<>();    //õðàíèì ïëàòôîðìû
-    private HashMap<KeyCode,Boolean> keys = new HashMap<>(); //Õðàíèê êîäû êíîïîê.
+public class Game extends Main {
+    public static ArrayList<Block> platforms = new ArrayList<>();
+    private HashMap<KeyCode,Boolean> keys = new HashMap<>();
 
 
-    Image backgroundImg = new Image(getClass().getResourceAsStream("fond1.jpg"));
+    Image backgroundImg = new Image(getClass().getResourceAsStream("/res/Game/fond1.jpg"));
     public static final int BLOCK_SIZE = 45;
     public static final int MARIO_SIZE = 45;
     public static final int BOUTON1_SIZE = 40;
@@ -97,7 +97,7 @@ public class Game extends Application {
                 }
             });
             gameRoot.getChildren().add(player);
-            appRoot.getChildren().addAll(backgroundIV, gameRoot, bouton);
+            Main.root.getChildren().addAll(backgroundIV, gameRoot);
         }
 
     private void update(){
@@ -132,21 +132,16 @@ public class Game extends Application {
 
     }
 
-    private boolean isPressed(KeyCode key){
-        return keys.getOrDefault(key,false);
-    }
-
-    @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void startGame() {
+        Stage primaryStage = new Stage();
         initContent();
-        Scene scene = new Scene(appRoot,900,720);
-        scene.setOnKeyPressed(event-> keys.put(event.getCode(), true));
-        scene.setOnKeyReleased(event -> {
+        getScene().setOnKeyPressed(event -> keys.put(event.getCode(), true));
+        getScene().setOnKeyReleased(event -> {
             keys.put(event.getCode(), false);
             player.animation.stop();
         });
-        primaryStage.setTitle("Mini Mario");
-        primaryStage.setScene(scene);
+        primaryStage.setTitle("Boumaragame");
+        primaryStage.setScene(getScene());
         primaryStage.show();
         AnimationTimer timer = new AnimationTimer() {
             @Override
@@ -156,7 +151,9 @@ public class Game extends Application {
         };
         timer.start();
     }
-    public static void main(String[] args) {
-        launch(args);
+
+    private boolean isPressed(KeyCode key){
+        return keys.getOrDefault(key,false);
     }
+
 }

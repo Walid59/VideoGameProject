@@ -27,45 +27,14 @@ public class Menu extends Main{
         start.setLayoutY(200);
 
         //-------------------------test----------------------------
-        Button test = new Button("test"); test.setLayoutX(200); test.setLayoutY(200); test.setVisible(false); test.setDisable(true);
-
-        //pour le handler event
-        Text t = new Text(550, 100, "");
 
         start.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                t.setText("This is a test");
-                t.setFont(Font.font("Arial" , FontWeight.BOLD, 40));
-                t.setStyle("-fx-font-weight: bold");
-                t.setVisible(true);
-
-                test.setVisible(true);
-                test.setDisable(false);
-                /*
-                for (Button b : buttons) {
-                    b.setDisable(true);
-                    b.setVisible(false);
-                }
-
-                 */
-                startGame();
+                gameStarted();
             }
         });
 
-        test.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                test.setVisible(false);
-                test.setDisable(true);
-                t.setVisible(false);
-
-                for (Button b : buttons) {
-                    b.setDisable(false);
-                    b.setVisible(true);
-                }
-            }
-        });
         //----------------------SETTINGS BUTTON----------------------
         settings.setLayoutX((Main.getSceneWidth() / 2) - (MainMenuButton.getButtonWidth() / 2));
         settings.setLayoutY(300);
@@ -74,10 +43,12 @@ public class Menu extends Main{
         credits.setLayoutY(400);
 
         //pour afficher dans le root les boutons
-        root.getChildren().addAll(start, settings, credits, t, test);
+        root.getChildren().addAll(start, settings, credits);
     }
 
-    public static void startGame(){
+    public static void gameStarted(){
         root.getChildren().removeAll(start, settings, credits);
+        Game g = new Game();
+        g.startGame();
     }
 }

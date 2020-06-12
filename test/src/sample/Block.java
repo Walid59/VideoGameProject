@@ -7,7 +7,7 @@ import javafx.scene.layout.Pane;
 
 
 public class Block extends Pane {
-    Image blocksImg = new Image(getClass().getResourceAsStream("1.png"));
+    Image blocksImg = new Image(getClass().getResourceAsStream("/res/Game/1.png"));
     ImageView block;
     public enum BlockType {
         PLATFORM, BRICK, BONUS, PIPE_TOP, PIPE_BOTTOM, INVISIBLE_BLOCK, STONE
