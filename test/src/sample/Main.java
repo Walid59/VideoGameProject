@@ -21,8 +21,8 @@ public class Main extends Application {
     public static Pane root = new Pane();
 
     //pour la taille de la scene
-    private final static int SCENE_WIDTH = 1000;
-    private final static int SCENE_HEIGHT = 600;
+    private final static int SCENE_WIDTH = 900;
+    private final static int SCENE_HEIGHT = 720;
 
     //getters
     public static int getSceneWidth() {

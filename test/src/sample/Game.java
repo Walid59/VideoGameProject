@@ -1,4 +1,4 @@
-package sample.mario;
+package sample;
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
@@ -15,7 +15,7 @@ import javafx.event.ActionEvent;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import static sample.mario.Button.ButtonType.ETEINT;
+//import static sample.mario.Button.ButtonType.ETEINT;
 
 
 public class Game extends Application {
@@ -77,7 +77,7 @@ public class Game extends Application {
         }
 
             player = new Character();
-            bouton = new Button(ETEINT, 64, 2000);
+            //bouton = new Button(ETEINT, 64, 2000);
             player.setTranslateX(64); //pour gérer où va atterir le perso axe des abscisses
             player.setTranslateY(2000);//pour gérer où va atterir le perso axe des ordonnées (à partir de 799 -> problème)
             //IMPORTANT : code pour le background scrolling
@@ -99,7 +99,6 @@ public class Game extends Application {
             gameRoot.getChildren().add(player);
             appRoot.getChildren().addAll(backgroundIV, gameRoot, bouton);
         }
-
 
     private void update(){
         // joueur
@@ -132,9 +131,11 @@ public class Game extends Application {
         }
 
     }
+
     private boolean isPressed(KeyCode key){
         return keys.getOrDefault(key,false);
     }
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         initContent();

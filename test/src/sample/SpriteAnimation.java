@@ -1,4 +1,4 @@
-package sample.mario;
+package sample;
 
 import javafx.animation.Animation;
 import javafx.animation.Interpolator;

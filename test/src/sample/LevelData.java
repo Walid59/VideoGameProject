@@ -1,4 +1,4 @@
-package sample.mario;
+package sample;
 
 public class LevelData {
 
