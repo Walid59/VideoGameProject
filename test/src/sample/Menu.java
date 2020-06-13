@@ -55,8 +55,13 @@ public class Menu extends Main{
         credits.setLayoutX((Main.getSceneWidth() / 2) - (MainMenuButton.getButtonWidth() / 2));
         credits.setLayoutY(400);
 
+        //-------------------------test-------------------------
+        Text test = new Text((Main.getSceneWidth() / 2) - (MainMenuButton.getButtonWidth() / 2),100,"Hello World!");
+        test.setFont(new Font (20));
+        test.setFill(Color.WHITE);
+
         //pour afficher dans le root les boutons
-        root.getChildren().addAll(start, settings, credits);
+        root.getChildren().addAll(start, settings, credits,test);
 
         //un petit test oklm
         try {

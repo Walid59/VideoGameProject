@@ -97,10 +97,12 @@ public class Game extends Main {
             });
             gameRoot.getChildren().add(player);
             Main.root.getChildren().addAll(backgroundIV, gameRoot);
-
+/*
             GameButton b = new GameButton(GameButton.ButtonType.WHITE,300,300);
             GameButton c = new GameButton(GameButton.ButtonType.BLACK,350,300);
             Main.root.getChildren().addAll(b,c);
+
+ */
 
     }
 
