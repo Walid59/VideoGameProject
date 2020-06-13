@@ -7,10 +7,10 @@ import javafx.scene.layout.Pane;
 
 
 public class Block extends Pane {
-    Image blocksImg = new Image(getClass().getResourceAsStream("/res/Game/1.png"));
+    Image blocksImg = new Image(getClass().getResourceAsStream("/res/Game/essai2.png"));
     ImageView block;
     public enum BlockType {
-        PLATFORM, BRICK, BONUS, PIPE_TOP, PIPE_BOTTOM, INVISIBLE_BLOCK, STONE
+        SOL_GAUCHE, SOL_DROIT, SOL, SOL_COTE_GAUCHE, SOL_COTE_DROIT, PLAFOND, PLAFOND_GAUCHE, PlAFOND_DROIT, PLATFORM_MILIEU, PLATFORM_GAUCHE, PLATFORM_DROIT
     }
     public Block(BlockType blockType, int x, int y) {
 
@@ -20,31 +20,41 @@ public class Block extends Pane {
         setTranslateX(x);
         setTranslateY(y);
         switch (blockType) {
-            case PLATFORM:
-                block.setViewport(new Rectangle2D(0, 64, 16, 16));
+            case SOL_GAUCHE:
+                block.setViewport(new Rectangle2D(0, 0, 29, 29));
                 break;
-            case BRICK:
-                block.setViewport(new Rectangle2D(0, 48, 16, 16));
+            case SOL:
+                block.setViewport(new Rectangle2D(30, 0, 29, 29));
                 break;
-            case BONUS:
-                block.setViewport(new Rectangle2D(384, 64, 16, 16));
+            case SOL_DROIT:
+                block.setViewport(new Rectangle2D(60, 0, 29, 29));
                 break;
-            case PIPE_TOP:
-                block.setViewport(new Rectangle2D(0, 294, 32, 16));
-                block.setFitWidth(Game.BLOCK_SIZE * 2);
+            case SOL_COTE_GAUCHE:
+                block.setViewport(new Rectangle2D(90, 0, 29, 29));
                 break;
-            case PIPE_BOTTOM:
-                block.setViewport(new Rectangle2D(0, 304, 32, 14));
-                block.setFitWidth(Game.BLOCK_SIZE * 2);
+            case SOL_COTE_DROIT:
+                block.setViewport(new Rectangle2D(180, 0, 29, 29));
                 break;
-            case INVISIBLE_BLOCK:
-                block.setViewport(new Rectangle2D(0, 0, 16, 16));
-                block.setOpacity(0);
+            case PLAFOND:
+                block.setViewport(new Rectangle2D(120, 0, 29, 29));
                 break;
-            case STONE:
-                block.setViewport(new Rectangle2D(0, 16, 16, 16)); //block pyramide
+            case PLAFOND_GAUCHE:
+                block.setViewport(new Rectangle2D(240, 0, 29, 29));
+                break;
+            case PlAFOND_DROIT:
+                block.setViewport(new Rectangle2D(210, 0, 29, 29));
+                break;
+            case PLATFORM_MILIEU:
+                block.setViewport(new Rectangle2D(300, 0, 29, 29));
+                break;
+            case PLATFORM_GAUCHE:
+                block.setViewport(new Rectangle2D(270, 0, 28, 28));
+                break;
+            case PLATFORM_DROIT:
+                block.setViewport(new Rectangle2D(330, 0, 28, 28));
                 break;
         }
+
         getChildren().add(block);
         Game.platforms.add(this);
         Game.gameRoot.getChildren().add(this);
