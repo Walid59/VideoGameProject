@@ -32,7 +32,6 @@ public class Game extends Main {
     public static Pane appRoot = new Pane();
     public static Pane gameRoot = new Pane();
     
-    public Button bouton;
     public Character player;
     int levelNumber = 0;
     private int levelWidth;
@@ -98,7 +97,12 @@ public class Game extends Main {
             });
             gameRoot.getChildren().add(player);
             Main.root.getChildren().addAll(backgroundIV, gameRoot);
-        }
+
+            GameButton b = new GameButton(GameButton.ButtonType.WHITE,300,300);
+            GameButton c = new GameButton(GameButton.ButtonType.BLACK,350,300);
+            Main.root.getChildren().addAll(b,c);
+
+    }
 
     private void update(){
         // joueur
@@ -120,15 +124,7 @@ public class Game extends Main {
         }
         player.moveY((int)player.playerVelocity.getY());
 
-        //bouton
 
-        if (isPressed(KeyCode.C) && (bouton.eteint)) {
-            bouton.eteint=false;
-        }
-
-        if (isPressed(KeyCode.C) && (!bouton.eteint)) {
-            bouton.eteint=true;
-        }
 
     }
 
