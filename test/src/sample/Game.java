@@ -49,27 +49,40 @@ public class Game extends Main {
                 switch (line.charAt(j)) {
                     case '0':
                         break;
-                    case '1':
-                        Block platformFloor = new Block(Block.BlockType.PLATFORM, j * BLOCK_SIZE, i * BLOCK_SIZE);
-                        break;
                     case '2':
-                        Block brick = new Block(Block.BlockType.BRICK, j * BLOCK_SIZE, i * BLOCK_SIZE);
+                        Block solGauche = new Block(Block.BlockType.SOL_GAUCHE, j * BLOCK_SIZE, i * BLOCK_SIZE);
+                        break;
+                    case '1':
+                        Block sol = new Block(Block.BlockType.SOL, j * BLOCK_SIZE, i * BLOCK_SIZE);
                         break;
                     case '3':
-                        Block bonus = new Block(Block.BlockType.BONUS, j * BLOCK_SIZE, i * BLOCK_SIZE);
+                        Block solDroit = new Block(Block.BlockType.SOL_DROIT, j * BLOCK_SIZE, i * BLOCK_SIZE);
                         break;
                     case '4':
-                        Block stone = new Block(Block.BlockType.STONE, j * BLOCK_SIZE, i * BLOCK_SIZE);
+                        Block solCoteGauche = new Block(Block.BlockType.SOL_COTE_GAUCHE, j * BLOCK_SIZE, i * BLOCK_SIZE);
                         break;
                     case '5':
-                        Block PipeTopBlock = new Block(Block.BlockType.PIPE_TOP, j * BLOCK_SIZE, i * BLOCK_SIZE);
+                        Block solCoteDroit = new Block(Block.BlockType.SOL_COTE_DROIT, j * BLOCK_SIZE, i * BLOCK_SIZE);
                         break;
                     case '6':
-                        Block PipeBottomBlock = new Block(Block.BlockType.PIPE_BOTTOM, j * BLOCK_SIZE, i * BLOCK_SIZE);
+                        Block plafond = new Block(Block.BlockType.PLAFOND, j * BLOCK_SIZE, i * BLOCK_SIZE);
                         break;
-                    case '*':
-                        Block InvisibleBlock = new Block(Block.BlockType.INVISIBLE_BLOCK, j * BLOCK_SIZE, i * BLOCK_SIZE);
+                    case '7':
+                        Block plafondGauche = new Block(Block.BlockType.PLAFOND_GAUCHE, j * BLOCK_SIZE, i * BLOCK_SIZE);
                         break;
+                    case '8':
+                        Block plafondDroit = new Block(Block.BlockType.PlAFOND_DROIT, j * BLOCK_SIZE, i * BLOCK_SIZE);
+                        break;
+                    case '9':
+                        Block platformM= new Block(Block.BlockType.PLATFORM_MILIEU, j * BLOCK_SIZE, i * BLOCK_SIZE);
+                        break;
+                    case 'a':
+                        Block platformG= new Block(Block.BlockType.PLATFORM_GAUCHE, j * BLOCK_SIZE, i * BLOCK_SIZE);
+                        break;
+                    case 'b':
+                        Block platformD= new Block(Block.BlockType.PLATFORM_DROIT, j * BLOCK_SIZE, i * BLOCK_SIZE);
+                        break;
+
                 }
             }
 
