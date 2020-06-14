@@ -164,7 +164,6 @@ public class Game extends Main {
     }
 
     public void startGame() {
-        Stage primaryStage = new Stage();
         initContent();
         gameMusic();
         getScene().setOnKeyPressed(event -> keys.put(event.getCode(), true));
@@ -172,9 +171,6 @@ public class Game extends Main {
             keys.put(event.getCode(), false);
             player.animation.stop();
         });
-        primaryStage.setTitle("Boumaragame");
-        primaryStage.setScene(getScene());
-        primaryStage.show();
         AnimationTimer timer = new AnimationTimer() {
             @Override
             public void handle(long now) {
