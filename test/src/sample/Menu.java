@@ -69,7 +69,7 @@ public class Menu extends Main{
         }
 
          */
-        music();
+        menuMusic();
     }
 
     public static void gameStarted(){
@@ -78,7 +78,7 @@ public class Menu extends Main{
         g.startGame();
     }
 
-    public static void music(){
+    public static void menuMusic(){
         String s = "src/res/Music/pol.wav";
         Media h = new Media(Paths.get(s).toUri().toString()); //compliqué à expliquer ça
         mediaPlayer = new MediaPlayer(h);

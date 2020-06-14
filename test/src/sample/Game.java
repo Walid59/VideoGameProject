@@ -7,11 +7,15 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaException;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import javafx.scene.Group;
 import javafx.util.Duration;
 import javafx.event.ActionEvent;
 
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -36,6 +40,10 @@ public class Game extends Main {
     int levelNumber = 0;
     private int levelWidth;
     private int levelHeight = 3000;
+
+
+    //pour la musique
+    private static MediaPlayer mediaPlayer;
 
     private void initContent() {
         ImageView backgroundIV = new ImageView(backgroundImg);
@@ -158,6 +166,7 @@ public class Game extends Main {
     public void startGame() {
         Stage primaryStage = new Stage();
         initContent();
+        gameMusic();
         getScene().setOnKeyPressed(event -> keys.put(event.getCode(), true));
         getScene().setOnKeyReleased(event -> {
             keys.put(event.getCode(), false);
@@ -179,4 +188,17 @@ public class Game extends Main {
         return keys.getOrDefault(key,false);
     }
 
+    public static void gameMusic(){
+        String s = "src/res/Music/devilman.mp3";
+        Media h = new Media(Paths.get(s).toUri().toString()); //compliqué à expliquer ça
+        mediaPlayer = new MediaPlayer(h);
+        try{
+            mediaPlayer.setVolume(0.5);
+            mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
+            mediaPlayer.play();
+        } catch (MediaException e) {
+            e.printStackTrace();
+            System.out.println("pas trouvé");
+        }
+    }
 }
