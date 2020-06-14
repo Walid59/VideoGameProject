@@ -3,24 +3,19 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
-import javafx.scene.layout.Pane;
 import javafx.scene.media.Media;
+import javafx.scene.media.MediaException;
 import javafx.scene.media.MediaPlayer;
-import javafx.scene.media.MediaView;
 import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
-import javafx.scene.text.Text;
-
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
+import java.nio.file.Paths;
+
 
 public class Menu extends Main{
      private static Button start = new MainMenuButton("JOUER");
@@ -28,7 +23,8 @@ public class Menu extends Main{
      private static Button credits = new MainMenuButton("CREDITS");
 
      static Button[] buttons = {start, settings, credits};
-    private static FileInputStream music;
+    private static MediaPlayer mediaPlayer;
+
 
     public static void startMenu(){
         for(Button b : buttons){
@@ -45,6 +41,7 @@ public class Menu extends Main{
             @Override
             public void handle(ActionEvent event) {
                 gameStarted();
+                mediaPlayer.stop();
             }
         });
 
@@ -56,14 +53,12 @@ public class Menu extends Main{
         credits.setLayoutY(400);
 
         //-------------------------test-------------------------
-        Text test = new Text((Main.getSceneWidth() / 2) - (MainMenuButton.getButtonWidth() / 2),100,"Hello World!");
-        test.setFont(new Font (20));
-        test.setFill(Color.WHITE);
 
         //pour afficher dans le root les boutons
-        root.getChildren().addAll(start, settings, credits,test);
+        root.getChildren().addAll(start, settings, credits);
 
         //un petit test oklm
+        /*
         try {
             AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("D:/MusicPlayer/pol_wav.wav").getAbsoluteFile());
             Clip clip = AudioSystem.getClip();
@@ -72,11 +67,28 @@ public class Menu extends Main{
         } catch(Exception e){
             System.out.println("musique pas trouvée");
         }
+
+         */
+        music();
     }
 
     public static void gameStarted(){
         root.getChildren().removeAll(start, settings, credits);
         Game g = new Game();
         g.startGame();
+    }
+
+    public static void music(){
+        String s = "src/res/Music/pol.wav";
+        Media h = new Media(Paths.get(s).toUri().toString()); //compliqué à expliquer ça
+        mediaPlayer = new MediaPlayer(h);
+        try{
+            mediaPlayer.setVolume(0.5);
+            mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
+            mediaPlayer.play();
+        } catch (MediaException e) {
+            e.printStackTrace();
+            System.out.println("pas trouvé");
+        }
     }
 }
