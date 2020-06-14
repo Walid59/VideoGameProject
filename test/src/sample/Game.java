@@ -23,7 +23,7 @@ public class Game extends Main {
     private HashMap<KeyCode,Boolean> keys = new HashMap<>();
 
 
-    Image backgroundImg = new Image(getClass().getResourceAsStream("/res/Game/fond1.jpg"));
+    Image backgroundImg = new Image(getClass().getResourceAsStream("/res/Game/fond4.jpg"));
     public static final int BLOCK_SIZE = 45;
     public static final int MARIO_SIZE = 45;
     public static final int BOUTON1_SIZE = 40;
@@ -39,7 +39,7 @@ public class Game extends Main {
 
     private void initContent() {
         ImageView backgroundIV = new ImageView(backgroundImg);
-        backgroundIV.setFitHeight(48 * BLOCK_SIZE);
+        backgroundIV.setFitHeight(50 * BLOCK_SIZE);
         backgroundIV.setFitWidth(76 * BLOCK_SIZE);
 
         levelWidth = LevelData.levels[levelNumber][0].length() * BLOCK_SIZE;
@@ -77,10 +77,22 @@ public class Game extends Main {
                         Block platformM= new Block(Block.BlockType.PLATFORM_MILIEU, j * BLOCK_SIZE, i * BLOCK_SIZE);
                         break;
                     case 'a':
-                        Block platformG= new Block(Block.BlockType.PLATFORM_GAUCHE, j * BLOCK_SIZE, i * BLOCK_SIZE);
+                        Block etoile3 = new Block(Block.BlockType.ETOILE1, j * BLOCK_SIZE, i * BLOCK_SIZE);
                         break;
                     case 'b':
-                        Block platformD= new Block(Block.BlockType.PLATFORM_DROIT, j * BLOCK_SIZE, i * BLOCK_SIZE);
+                        Block etoile1= new Block(Block.BlockType.ETOILE2, j * BLOCK_SIZE, i * BLOCK_SIZE);
+                        break;
+                    case 'c':
+                        Block etoile2= new Block(Block.BlockType.ETOILE3, j * BLOCK_SIZE, i * BLOCK_SIZE);
+                        break;
+                    case 'd':
+                        Block etoile4= new Block(Block.BlockType.ETOILE4, j * BLOCK_SIZE, i * BLOCK_SIZE);
+                        break;
+                    case 'e':
+                        Block etoile5= new Block(Block.BlockType.ETOILE5, j * BLOCK_SIZE, i * BLOCK_SIZE);
+                        break;
+                    case 'f':
+                        Block lune= new Block(Block.BlockType.LUNE, j * BLOCK_SIZE, i * BLOCK_SIZE);
                         break;
 
                 }
@@ -95,9 +107,9 @@ public class Game extends Main {
             //IMPORTANT : code pour le background scrolling
             player.translateYProperty().addListener((obs, old, newValue) -> {
                 int offset = newValue.intValue();
-                if (offset > 640 && offset < levelHeight) { //pas touche non plus
-                    gameRoot.setLayoutY(-(offset - 640)); //plus la salle est grande et plus le nombre devient petit
-                    backgroundIV.setLayoutY(-(offset - 640)); //plus la salle est grande et plus le nombre devient petit
+                if (offset > 540 && offset < levelHeight) { //pas touche non plus
+                    gameRoot.setLayoutY(-(offset -  540)); //plus la salle est grande et plus le nombre devient petit
+                    backgroundIV.setLayoutY(-(offset - 540)); //plus la salle est grande et plus le nombre devient petit
                 }
             });
             //Fin du code pour background scrolling
