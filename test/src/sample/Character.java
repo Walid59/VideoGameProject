@@ -72,12 +72,19 @@ public class Character extends Pane{
                     }
                 }
             }
+            // A CHANGER
             this.setTranslateY(this.getTranslateY() + (movingDown?1:-1));
-            if(this.getTranslateY()>7000){ //pas touche à cette ligne
-                this.setTranslateX(64);
-                this.setTranslateY(800);
-                Game.gameRoot.setLayoutX(0);
+            if(this.getTranslateY()>2140){ //pas touche à cette ligne
+                this.setTranslateX(600);
+                this.setTranslateY(1300);
+                Game.gameRoot.setLayoutX(64);
             }
+            if ((this.getTranslateY()==1299) && (this.getTranslateX()>590)) {
+                this.setTranslateX(380);
+                this.setTranslateY(2050);
+                Game.gameRoot.setLayoutX(64);
+            }
+
         }
     }
     public void jumpPlayer(){
