@@ -56,19 +56,6 @@ public class Menu extends Main{
 
         //pour afficher dans le root les boutons
         root.getChildren().addAll(start, settings, credits);
-
-        //un petit test oklm
-        /*
-        try {
-            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("D:/MusicPlayer/pol_wav.wav").getAbsoluteFile());
-            Clip clip = AudioSystem.getClip();
-            clip.open(audioInputStream);
-            clip.start();
-        } catch(Exception e){
-            System.out.println("musique pas trouvée");
-        }
-
-         */
         menuMusic();
     }
 
@@ -83,7 +70,7 @@ public class Menu extends Main{
         Media h = new Media(Paths.get(s).toUri().toString()); //compliqué à expliquer ça
         mediaPlayer = new MediaPlayer(h);
         try{
-            mediaPlayer.setVolume(0.5);
+            mediaPlayer.setVolume(0.1);
             mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
             mediaPlayer.play();
         } catch (MediaException e) {

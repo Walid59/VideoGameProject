@@ -102,7 +102,6 @@ public class Game extends Main {
                     case 'f':
                         Block lune= new Block(Block.BlockType.LUNE, j * BLOCK_SIZE, i * BLOCK_SIZE);
                         break;
-
                 }
             }
 
@@ -189,7 +188,7 @@ public class Game extends Main {
         Media h = new Media(Paths.get(s).toUri().toString()); //compliqué à expliquer ça
         mediaPlayer = new MediaPlayer(h);
         try{
-            mediaPlayer.setVolume(0.5);
+            mediaPlayer.setVolume(0.1);
             mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
             mediaPlayer.play();
         } catch (MediaException e) {
