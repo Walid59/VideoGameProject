@@ -70,7 +70,7 @@ public class Menu extends Main{
         Media h = new Media(Paths.get(s).toUri().toString()); //compliqué à expliquer ça
         mediaPlayer = new MediaPlayer(h);
         try{
-            mediaPlayer.setVolume(0.1);
+            mediaPlayer.setVolume(0.05);
             mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
             mediaPlayer.play();
         } catch (MediaException e) {
