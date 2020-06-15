@@ -3,6 +3,7 @@ package sample;
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
@@ -10,6 +11,9 @@ import javafx.scene.layout.Pane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaException;
 import javafx.scene.media.MediaPlayer;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.scene.Group;
 import javafx.util.Duration;
@@ -162,9 +166,18 @@ public class Game extends Main {
 
     }
 
+    public void setText(int x,int y,String a){
+        Text t = new Text(x , y , a);
+        t.setFont(new Font(20));
+        t.setFill(Color.WHITE);
+        t.setEffect(new DropShadow());
+        gameRoot.getChildren().add(t);
+    }
+
     public void startGame() {
         initContent();
         gameMusic();
+        setText(64,2000,"a");
         getScene().setOnKeyPressed(event -> keys.put(event.getCode(), true));
         getScene().setOnKeyReleased(event -> {
             keys.put(event.getCode(), false);
