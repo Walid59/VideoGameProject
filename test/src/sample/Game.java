@@ -116,8 +116,8 @@ public class Game extends Main {
 
             player = new Character();
             //bouton = new Button(ETEINT, 64, 2000);
-            player.setTranslateX(64); //pour gérer où va atterir le perso axe des abscisses
-            player.setTranslateY(2000);//pour gérer où va atterir le perso axe des ordonnées (à partir de 799 -> problème)
+            player.setTranslateX(100); //pour gérer où va atterir le perso axe des abscisses
+            player.setTranslateY(2500);//pour gérer où va atterir le perso axe des ordonnées (à partir de 799 -> problème)
             //IMPORTANT : code pour le background scrolling
             player.translateYProperty().addListener((obs, old, newValue) -> {
                 int offset = newValue.intValue();
