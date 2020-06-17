@@ -41,12 +41,12 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Boumaragame");
-        root.setStyle("-fx-background-color: black;");
-
+           
         //création de la page (la "scene") de taille final
      scene = new Scene(root, SCENE_WIDTH, SCENE_HEIGHT);
 
         primaryStage.setResizable(true); //impossible de changer la taille de l'appli, à changer si nécessaire
+        scene.getStylesheets().addAll(this.getClass().getResource("style.css").toExternalForm());
         primaryStage.setScene(scene); //on ajoute la scene
     //primaryStage.setAlwaysOnTop(true); //qui sert à afficher en foreground du pc l'appli, inutile pour l'instant (peut-être jamais)
         primaryStage.show();
