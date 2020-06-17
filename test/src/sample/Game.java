@@ -54,7 +54,7 @@ public class Game extends Main {
 
     private void initContent() {
         ImageView backgroundIV = new ImageView(backgroundImg);
-        backgroundIV.setFitHeight(50 * BLOCK_SIZE);
+        backgroundIV.setFitHeight(74 * BLOCK_SIZE);
         backgroundIV.setFitWidth(76 * BLOCK_SIZE);
 
         levelWidth = LevelData.levels[levelNumber][0].length() * BLOCK_SIZE;
@@ -92,22 +92,16 @@ public class Game extends Main {
                         Block platformM= new Block(Block.BlockType.PLATFORM_MILIEU, j * BLOCK_SIZE, i * BLOCK_SIZE);
                         break;
                     case 'a':
-                        Block etoile3 = new Block(Block.BlockType.ETOILE1, j * BLOCK_SIZE, i * BLOCK_SIZE);
+                        Block etoile3 = new Block(Block.BlockType.ETOILE1ROUGE, j * BLOCK_SIZE, i * BLOCK_SIZE);
                         break;
                     case 'b':
                         Block etoile1= new Block(Block.BlockType.ETOILE2, j * BLOCK_SIZE, i * BLOCK_SIZE);
                         break;
                     case 'c':
-                        Block etoile2= new Block(Block.BlockType.ETOILE3, j * BLOCK_SIZE, i * BLOCK_SIZE);
+                        Block etoile2= new Block(Block.BlockType.ETOILE3BLEU, j * BLOCK_SIZE, i * BLOCK_SIZE);
                         break;
                     case 'd':
-                        Block etoile4= new Block(Block.BlockType.ETOILE4, j * BLOCK_SIZE, i * BLOCK_SIZE);
-                        break;
-                    case 'e':
-                        Block etoile5= new Block(Block.BlockType.ETOILE5, j * BLOCK_SIZE, i * BLOCK_SIZE);
-                        break;
-                    case 'f':
-                        Block lune= new Block(Block.BlockType.LUNE, j * BLOCK_SIZE, i * BLOCK_SIZE);
+                        Block etoile4= new Block(Block.BlockType.ETOILE4VERT, j * BLOCK_SIZE, i * BLOCK_SIZE);
                         break;
                 }
             }
@@ -116,8 +110,8 @@ public class Game extends Main {
 
             player = new Character();
             //bouton = new Button(ETEINT, 64, 2000);
-            player.setTranslateX(64); //pour gérer où va atterir le perso axe des abscisses
-            player.setTranslateY(1500);//pour gérer où va atterir le perso axe des ordonnées (à partir de 799 -> problème)
+            player.setTranslateX(150); //pour gérer où va atterir le perso axe des abscisses
+            player.setTranslateY(2000);//pour gérer où va atterir le perso axe des ordonnées (à partir de 799 -> problème)
             //IMPORTANT : code pour le background scrolling
             player.translateYProperty().addListener((obs, old, newValue) -> {
                 int offset = newValue.intValue();
