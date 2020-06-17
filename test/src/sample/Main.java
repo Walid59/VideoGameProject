@@ -41,6 +41,16 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Boumaragame");
+        
+        root.setId("pane");
+        //a mettre dans une méthode
+        Text t = new Text("UN JEU REALISE PAR :");
+        t.setX(300.0f);
+        t.setY(120.0f);
+        t.setFill(Color.WHITE);
+        t.setFont(Font.loadFont("file:res/MenuButton/yoster.ttf", 2000));
+        root.getChildren().addAll(t);
+        //fin méthode
            
         //création de la page (la "scene") de taille final
      scene = new Scene(root, SCENE_WIDTH, SCENE_HEIGHT);
