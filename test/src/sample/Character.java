@@ -74,10 +74,11 @@ public class Character extends Pane{
             }
             // A CHANGER
             this.setTranslateY(this.getTranslateY() + (movingDown?1:-1));
-            if(this.getTranslateY()>12000){ //pas touche à cette ligne
-                this.setTranslateX(600);
-                this.setTranslateY(1300);
-                Game.gameRoot.setLayoutX(64);
+            if(this.getTranslateY()>2790){ 
+                this.setTranslateX(1475);
+                this.setTranslateY(2789);
+                Game.gameRoot.setLayoutX(1470);
+                Game.gameRoot.setLayoutY(2789);
             }
            /* if ((this.getTranslateY()==1299) && (this.getTranslateX()>590)) {
                 this.setTranslateX(380);
