@@ -1,19 +1,10 @@
 package sample;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.scene.control.Hyperlink;
 import javafx.scene.layout.Pane;
-import javafx.scene.control.Button;
-import javafx.scene.paint.Color;
-import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
-import javafx.scene.text.Text;
-import javafx.scene.text.Font;
-import javafx.scene.text.TextFlow;
-
+import java.io.FileNotFoundException;
 
 
 public class Main extends Application {
@@ -39,26 +30,17 @@ public class Main extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage) throws FileNotFoundException {
         primaryStage.setTitle("Boumaragame");
         
         root.setId("pane");
-        //a mettre dans une méthode
-        Text t = new Text("UN JEU REALISE PAR :");
-        t.setX(300.0f);
-        t.setY(120.0f);
-        t.setFill(Color.WHITE);
-        t.setFont(Font.loadFont("file:res/MenuButton/yoster.ttf", 2000));
-        root.getChildren().addAll(t);
+
         //fin méthode
            
         //création de la page (la "scene") de taille final
      scene = new Scene(root, SCENE_WIDTH, SCENE_HEIGHT);
-
-        primaryStage.setResizable(true); //impossible de changer la taille de l'appli, à changer si nécessaire
-        scene.getStylesheets().addAll(this.getClass().getResource("style.css").toExternalForm());
+           scene.getStylesheets().addAll(this.getClass().getResource("style.css").toExternalForm());
         primaryStage.setScene(scene); //on ajoute la scene
-    //primaryStage.setAlwaysOnTop(true); //qui sert à afficher en foreground du pc l'appli, inutile pour l'instant (peut-être jamais)
         primaryStage.show();
         Menu.startMenu();
     }

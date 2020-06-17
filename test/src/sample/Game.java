@@ -169,13 +169,7 @@ public class Game extends Main {
         t.setFill(Color.WHITE);
         t.setEffect(new DropShadow());
         gameRoot.getChildren().add(t);
-        t.setVisible(false);
-        if(   ((player.getLayoutX() - t.getLayoutX()) < 2 && (player.getLayoutX() - t.getLayoutX()) > -2) && ((player.getLayoutY() - t.getLayoutY()) < 2 && (player.getLayoutY() - t.getLayoutY()) > -2) ){
-            t.setVisible(true);
-        }
-        else{
-            t.setVisible(false);
-        }
+        t.setVisible(true);
     }
 
     public void startGame() {

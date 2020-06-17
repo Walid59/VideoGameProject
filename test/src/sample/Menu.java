@@ -3,32 +3,29 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
+import javafx.scene.effect.DropShadow;
+import javafx.scene.layout.Pane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaException;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.lang.reflect.InvocationTargetException;
 import java.nio.file.Paths;
 
 
 public class Menu extends Main{
      private static Button start = new MainMenuButton("JOUER");
      private static Button settings = new MainMenuButton("PARAMETRES");
-     private static Button credits = new MainMenuButton("CREDITS");
 
-     static Button[] buttons = {start, settings, credits};
+
+     static Button[] buttons = {start, settings};
     private static MediaPlayer mediaPlayer;
 
 
-    public static void startMenu(){
+    public static void startMenu() throws FileNotFoundException {
         for(Button b : buttons){
             b.setTextFill(Color.WHITE);
         }
@@ -50,14 +47,38 @@ public class Menu extends Main{
         //----------------------SETTINGS BUTTON----------------------
         settings.setLayoutX((Main.getSceneWidth() / 2) - (MainMenuButton.getButtonWidth() / 2));
         settings.setLayoutY(300);
-        //-----------------------CREDITS BUTTON----------------------
-        credits.setLayoutX((Main.getSceneWidth() / 2) - (MainMenuButton.getButtonWidth() / 2));
-        credits.setLayoutY(400);
 
         //-------------------------test-------------------------
+        Pane u = new GameText(300,100,"POURUQOI CA FONCTIONNE PAS PUTAIN DE MERDE",20);
+        root.getChildren().add(u);
+
+        //titre
+        Text title = new Text((Main.getSceneWidth() / 2.25),125,"Un jeu");
+        title.setFill(Color.WHITE);
+        title.setFont(Font.loadFont(new FileInputStream("src/res/MenuButton/yoster.ttf"),50));
+        root.getChildren().add(title);
+        title.setEffect(new DropShadow());
+
+
+        //credits
+        Text credits = new Text(300,500,"UN JEU REALISE PAR :");
+
+        Text walid = new Text(40,475,"Walid");
+        Text guillaume = new Text(150,475,"Guillaume");
+        Text océane = new Text(625,475,"Océane");
+        Text henri = new Text(775,475,"Henri");
+        Text[] texts = {walid, guillaume, henri, océane, credits};
+        for(Text t : texts){
+            t.setFill(Color.WHITE);
+            t.setFont(Font.loadFont(new FileInputStream("src/res/MenuButton/yoster.ttf"),23));
+            root.getChildren().add(t);
+        }
+
+
+
 
         //pour afficher dans le root les boutons
-        root.getChildren().addAll(start, settings, credits);
+        root.getChildren().addAll(start, settings);
         menuMusic();
 
         //Titre du jeu
@@ -65,7 +86,7 @@ public class Menu extends Main{
     }
 
     public static void gameStarted(){
-        root.getChildren().removeAll(start, settings, credits);
+        root.getChildren().removeAll(start, settings);
         Game g = new Game();
         g.startGame();
     }
