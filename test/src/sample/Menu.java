@@ -7,6 +7,8 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaException;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
+
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
@@ -57,6 +59,9 @@ public class Menu extends Main{
         //pour afficher dans le root les boutons
         root.getChildren().addAll(start, settings, credits);
         menuMusic();
+
+        //Titre du jeu
+        setGameTitle();
     }
 
     public static void gameStarted(){
@@ -65,12 +70,13 @@ public class Menu extends Main{
         g.startGame();
     }
 
+    //------------------------MUSIQUE DU JEU---------------------
     public static void menuMusic(){
-        String s = "src/res/Music/pol.wav";
+        String s = "src/res/Music/menu.mp3";
         Media h = new Media(Paths.get(s).toUri().toString()); //compliqué à expliquer ça
         mediaPlayer = new MediaPlayer(h);
         try{
-            mediaPlayer.setVolume(0.05);
+            mediaPlayer.setVolume(0.1);
             mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
             mediaPlayer.play();
         } catch (MediaException e) {
@@ -78,4 +84,10 @@ public class Menu extends Main{
             System.out.println("pas trouvé");
         }
     }
+    //-----------------------TITRE--------------------------
+    public static void setGameTitle(){
+        GameTitle t = new GameTitle((Main.getSceneWidth() / 2) - (MainMenuButton.getButtonWidth() / 2),200,"test");
+        root.getChildren().add(t);
+    }
+
 }

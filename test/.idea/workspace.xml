@@ -91,7 +91,7 @@
     <property name="recentsLimit" value="5" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.Game">
+  <component name="RunManager" selected="Application.Menu">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -227,8 +227,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Game" />
         <item itemvalue="Application.Menu" />
+        <item itemvalue="Application.Game" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.MainCharacter" />
@@ -285,22 +285,22 @@
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state x="688" y="221" key="FileChooserDialogImpl/0.0.1366.736@0.0.1366.736" timestamp="1592136708418" />
-    <state width="1323" height="226" key="GridCell.Tab.0.bottom" timestamp="1592326211061">
+    <state width="1323" height="211" key="GridCell.Tab.0.bottom" timestamp="1592400078637">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state width="1323" height="226" key="GridCell.Tab.0.bottom/0.0.1366.736@0.0.1366.736" timestamp="1592326211061" />
-    <state width="1323" height="226" key="GridCell.Tab.0.center" timestamp="1592326211061">
+    <state width="1323" height="211" key="GridCell.Tab.0.bottom/0.0.1366.736@0.0.1366.736" timestamp="1592400078637" />
+    <state width="1323" height="211" key="GridCell.Tab.0.center" timestamp="1592400078637">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state width="1323" height="226" key="GridCell.Tab.0.center/0.0.1366.736@0.0.1366.736" timestamp="1592326211061" />
-    <state width="1323" height="226" key="GridCell.Tab.0.left" timestamp="1592326211061">
+    <state width="1323" height="211" key="GridCell.Tab.0.center/0.0.1366.736@0.0.1366.736" timestamp="1592400078637" />
+    <state width="1323" height="211" key="GridCell.Tab.0.left" timestamp="1592400078637">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state width="1323" height="226" key="GridCell.Tab.0.left/0.0.1366.736@0.0.1366.736" timestamp="1592326211061" />
-    <state width="1323" height="226" key="GridCell.Tab.0.right" timestamp="1592326211061">
+    <state width="1323" height="211" key="GridCell.Tab.0.left/0.0.1366.736@0.0.1366.736" timestamp="1592400078637" />
+    <state width="1323" height="211" key="GridCell.Tab.0.right" timestamp="1592400078637">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state width="1323" height="226" key="GridCell.Tab.0.right/0.0.1366.736@0.0.1366.736" timestamp="1592326211061" />
+    <state width="1323" height="211" key="GridCell.Tab.0.right/0.0.1366.736@0.0.1366.736" timestamp="1592400078637" />
     <state width="1323" height="226" key="GridCell.Tab.1.bottom" timestamp="1592326211062">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
@@ -321,10 +321,10 @@
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state x="184" y="11" key="SettingsEditor/0.0.1366.736@0.0.1366.736" timestamp="1592136941022" />
-    <state x="379" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1592319347227">
+    <state x="379" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1592387382918">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="379" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.736@0.0.1366.736" timestamp="1592319347227" />
+    <state x="379" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.736@0.0.1366.736" timestamp="1592387382918" />
     <state x="218" y="0" width="969" height="482" key="dock-window-1" timestamp="1592325676267">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
@@ -341,5 +341,16 @@
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state x="346" y="57" width="672" height="678" key="search.everywhere.popup/0.0.1366.736@0.0.1366.736" timestamp="1592237012760" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/sample/Game.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

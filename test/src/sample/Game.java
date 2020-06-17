@@ -207,7 +207,7 @@ public class Game extends Main {
     }
 
     public static void gameMusic(){
-        String s = "src/res/Music/devilman.mp3";
+        String s = "src/res/Music/game.mp3";
         Media h = new Media(Paths.get(s).toUri().toString()); //compliqué à expliquer ça
         mediaPlayer = new MediaPlayer(h);
         try{
