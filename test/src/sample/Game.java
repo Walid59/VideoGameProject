@@ -181,6 +181,7 @@ public class Game extends Main {
     public void startGame() {
         initContent();
         gameMusic();
+        setText(2735,1210, "Suites arithmétiques");
         setText(400,2000,"ok boomer");
         getScene().setOnKeyPressed(event -> keys.put(event.getCode(), true));
         getScene().setOnKeyReleased(event -> {
