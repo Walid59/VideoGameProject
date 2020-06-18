@@ -54,8 +54,8 @@ public class Game extends Main {
 
     private void initContent() {
         ImageView backgroundIV = new ImageView(backgroundImg);
-        backgroundIV.setFitHeight(74 * BLOCK_SIZE);
-        backgroundIV.setFitWidth(76 * BLOCK_SIZE);
+        backgroundIV.setFitHeight(67 * BLOCK_SIZE);
+        backgroundIV.setFitWidth(127 * BLOCK_SIZE);
 
         levelWidth = LevelData.levels[levelNumber][0].length() * BLOCK_SIZE;
         for (int i = 0; i < LevelData.levels[levelNumber].length; i++) {
@@ -111,7 +111,7 @@ public class Game extends Main {
             player = new Character();
             //bouton = new Button(ETEINT, 64, 2000);
             player.setTranslateX(150); //pour gérer où va atterir le perso axe des abscisses
-            player.setTranslateY(2000);//pour gérer où va atterir le perso axe des ordonnées (à partir de 799 -> problème)
+            player.setTranslateY(2780);//pour gérer où va atterir le perso axe des ordonnées (à partir de 799 -> problème)
             //IMPORTANT : code pour le background scrolling
             player.translateYProperty().addListener((obs, old, newValue) -> {
                 int offset = newValue.intValue();
