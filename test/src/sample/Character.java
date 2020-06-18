@@ -89,12 +89,13 @@ public class Character extends Pane{
             }
 
             //SALLE TUTO - SAUTDROIT1
-            if ((this.getTranslateY() == 2654) && ((this.getTranslateX() >= 1249) && (this.getTranslateX() <= 1290))) {
+            if ((this.getTranslateY()<= 2655 && this.getTranslateY()>=2510) && ((this.getTranslateX() >= 1249) && (this.getTranslateX() <= 1290))) {
                 this.setTranslateX(2000);
                 this.setTranslateY(2564);
                 Game.gameRoot.setLayoutX(-1660);
                 Game.gameRoot.setLayoutY(-2024);
             }
+
 
             // ------------------------------------------------------
 
