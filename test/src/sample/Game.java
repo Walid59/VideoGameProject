@@ -177,6 +177,8 @@ public class Game extends Main {
         gameMusic();
         setText(2735,1210, "Suites arithmétiques");
         setText(2530,160, "Vous avez gagné !");
+        setText(1390,500, "Les étoiles vous montrent la voie");
+
 
         getScene().setOnKeyPressed(event -> keys.put(event.getCode(), true));
         getScene().setOnKeyReleased(event -> {
