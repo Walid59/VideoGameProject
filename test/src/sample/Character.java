@@ -72,16 +72,33 @@ public class Character extends Pane{
                     }
                 }
             }
-            // A CHANGER
-            this.setTranslateY(this.getTranslateY() + (movingDown?1:-1));
-            if(this.getTranslateY()>2850){ //
+                        // BAS
+            this.setTranslateY(this.getTranslateY() + (movingDown ? 1 : -1));
+            if (this.getTranslateY() > 2850) { //pas touche à cette ligne
                 this.setTranslateX(100);
                 this.setTranslateY(2789);
                 Game.gameRoot.setLayoutX(240);
                 Game.gameRoot.setLayoutY(-2249);
             }
-            
-                        //Salle 1 - SAUT BAS
+            //SALLE TUTO - SAUTHAUT1
+            if ((this.getTranslateY() == 2425) && ((this.getTranslateX() > 711) && (this.getTranslateX() < 819))) {
+                this.setTranslateX(1200);
+                this.setTranslateY(2789);
+                Game.gameRoot.setLayoutX(-860);
+                Game.gameRoot.setLayoutY(-2249);
+            }
+
+            //SALLE TUTO - SAUTDROIT1
+            if ((this.getTranslateY() == 2654) && ((this.getTranslateX() >= 1249) && (this.getTranslateX() <= 1290))) {
+                this.setTranslateX(2000);
+                this.setTranslateY(2564);
+                Game.gameRoot.setLayoutX(-1660);
+                Game.gameRoot.setLayoutY(-2024);
+            }
+
+            // ------------------------------------------------------
+
+            //Salle 1 - SAUT BAS
             if ((this.getTranslateY() == 2670) && ((this.getTranslateX() >= 2061) && (this.getTranslateX() <= 2119))) {
                 this.setTranslateX(100);
                 this.setTranslateY(2789);
@@ -235,6 +252,9 @@ public class Character extends Pane{
                 Game.gameRoot.setLayoutY(-(2789 - 540));
             }
 
+
+	     
+		
             // 2eme étage
             //salle de base
             if(this.getTranslateX()>=2990 && this.getTranslateX()<=3045 && this.getTranslateY()<=1755 && this.getTranslateY()>=1599){ //pas touche à cette ligne
