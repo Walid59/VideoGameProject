@@ -176,7 +176,6 @@ public class Game extends Main {
         initContent();
         gameMusic();
         setText(2735,1210, "Suites arithmétiques");
-        setText(400,2000,"ok boomer");
         setText(2530,160, "Vous avez gagné !");
 
         getScene().setOnKeyPressed(event -> keys.put(event.getCode(), true));

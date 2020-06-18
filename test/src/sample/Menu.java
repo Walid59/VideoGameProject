@@ -48,9 +48,6 @@ public class Menu extends Main{
         settings.setLayoutX((Main.getSceneWidth() / 2) - (MainMenuButton.getButtonWidth() / 2));
         settings.setLayoutY(300);
 
-        //-------------------------test-------------------------
-        Pane u = new GameText(300,100,"POURUQOI CA FONCTIONNE PAS PUTAIN DE MERDE",20);
-        root.getChildren().add(u);
 
         //titre
         Text title = new Text((Main.getSceneWidth() / 2.25),125,"Un jeu");
@@ -75,14 +72,10 @@ public class Menu extends Main{
         }
 
 
-
-
         //pour afficher dans le root les boutons
         root.getChildren().addAll(start, settings);
         menuMusic();
 
-        //Titre du jeu
-        setGameTitle();
     }
 
     public static void gameStarted(){
@@ -104,11 +97,6 @@ public class Menu extends Main{
             e.printStackTrace();
             System.out.println("pas trouvé");
         }
-    }
-    //-----------------------TITRE--------------------------
-    public static void setGameTitle(){
-        GameTitle t = new GameTitle((Main.getSceneWidth() / 2) - (MainMenuButton.getButtonWidth() / 2),200,"test");
-        root.getChildren().add(t);
     }
 
 }
