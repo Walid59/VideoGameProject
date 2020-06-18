@@ -450,7 +450,7 @@ public class Character extends Pane{
 
             //Premiere salle
             //retour
-            if(this.getTranslateX()>1901 && this.getTranslateX()<1651 && this.getTranslateY()<=765 && this.getTranslateY()>=680){ //pas touche à cette ligne
+            if(this.getTranslateX()>1901 && this.getTranslateX()<1951 && this.getTranslateY()<=765 && this.getTranslateY()>=680){ //pas touche à cette ligne
                 this.setTranslateX(1390);
                 this.setTranslateY(764);
                 Game.gameRoot.setLayoutX(-1050);
