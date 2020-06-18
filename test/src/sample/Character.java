@@ -80,6 +80,160 @@ public class Character extends Pane{
                 Game.gameRoot.setLayoutX(240);
                 Game.gameRoot.setLayoutY(-2249);
             }
+            
+                        //Salle 1 - SAUT BAS
+            if ((this.getTranslateY() == 2670) && ((this.getTranslateX() >= 2061) && (this.getTranslateX() <= 2119))) {
+                this.setTranslateX(100);
+                this.setTranslateY(2789);
+                Game.gameRoot.setLayoutX(240);
+                Game.gameRoot.setLayoutY(-2249);
+            }
+            //SAUT HAUT - SOLUTION
+            if ((this.getTranslateY() == 2320) && ((this.getTranslateX() >= 2056) && (this.getTranslateX() <= 2121))) {
+                this.setTranslateX(2050);
+                this.setTranslateY(2000);
+                Game.gameRoot.setLayoutX(-(2050 - 340));
+                Game.gameRoot.setLayoutY(-(2000 - 540));
+            }
+            //SAUT DROIT
+            if (((this.getTranslateX() >= 2383) && (this.getTranslateX() <= 2414)) && ((this.getTranslateY() >= 2451) && (this.getTranslateY() <= 2520))) {
+                this.setTranslateX(1200);
+                this.setTranslateY(2789);
+                Game.gameRoot.setLayoutX(-860);
+                Game.gameRoot.setLayoutY(-2249);
+            }
+
+            // -----------------------------------------------------------------------
+
+            //SALLE 2 - SAUT HAUT
+            if (((this.getTranslateX() >= 2091) && (this.getTranslateX() <= 2169)) && ((this.getTranslateY() >= 1889) && (this.getTranslateY() <= 1950))) {
+                this.setTranslateX(2010);
+                this.setTranslateY(2159);
+                Game.gameRoot.setLayoutX(-(2010 - 340));
+                Game.gameRoot.setLayoutY(-(2159 - 540));
+            }
+
+            //SALLE 2 - SAUT GAUCHE - SOLUTION -> SALLE 3
+            if (((this.getTranslateX() >= 1905) && (this.getTranslateX() <= 1931)) && ((this.getTranslateY() >= 2025) && (this.getTranslateY() <= 2070))) {
+                this.setTranslateX(3200);
+                this.setTranslateY(2024);
+                Game.gameRoot.setLayoutX(-(3200 - 340));
+                Game.gameRoot.setLayoutY(-(2024 - 540));
+            }
+
+            //SALLE 2 - SAUT BAS
+            if (((this.getTranslateX() >= 2105) && (this.getTranslateX() <= 2211)) && ((this.getTranslateY() >= 2295) && (this.getTranslateY() <= 2320))) {
+                this.setTranslateX(2000);
+                this.setTranslateY(2564);
+                Game.gameRoot.setLayoutX(-1660);
+                Game.gameRoot.setLayoutY(-2024);
+            }
+
+            //---------------------------------------------
+
+            //SALLE 3 - SAUT HAUT - SOLUTION -> VERS SALLE 4
+            if (((this.getTranslateX() >= 3259) && (this.getTranslateX() <= 3354)) && ((this.getTranslateY() >= 1845) && (this.getTranslateY() <= 1880))) {
+                this.setTranslateX(3289);
+                this.setTranslateY(2789);
+                Game.gameRoot.setLayoutX(-(3289-340));
+                Game.gameRoot.setLayoutY(-(2789-540));
+            }
+
+          //SALLE 3 - SAUT BAS -> VERS SALLE 1
+            if (((this.getTranslateX() >= 3265) && (this.getTranslateX() <= 3415)) && ((this.getTranslateY() >= 2120) && (this.getTranslateY() <= 2130))) {
+                this.setTranslateX(2000);
+                this.setTranslateY(2564);
+                Game.gameRoot.setLayoutX(-1660);
+                Game.gameRoot.setLayoutY(-2024);
+            }
+
+            //SALLE 3 - SAUT DROIT -> VERS SALLE 2
+            if (((this.getTranslateX() >= 3585) && (this.getTranslateX() <= 3600)) && ((this.getTranslateY() >= 1987) && (this.getTranslateY() <= 2025))) {
+                this.setTranslateX(2016);
+                this.setTranslateY(2159);
+                Game.gameRoot.setLayoutX(-(2016-340));
+                Game.gameRoot.setLayoutY(-(2159-540));
+            }
+
+            // --------------------------------------
+
+            //SALLE 4 - SAUT BAS - SOLUTION
+            if (((this.getTranslateX() >= 3353) && (this.getTranslateX() <= 3479)) && (this.getTranslateY() > 2800)) {
+                this.setTranslateX(4751);
+                this.setTranslateY(2654);
+                Game.gameRoot.setLayoutX(-(4751-340));
+                Game.gameRoot.setLayoutY(-(2654-540));
+            }
+
+            // SALLE 4 - SAUT HAUT -> SALLE 1
+            if (((this.getTranslateX() >= 3346) && (this.getTranslateX() <= 3446)) && ((this.getTranslateY()>= 2519) && (this.getTranslateY() <= 2589))) {
+                this.setTranslateX(2000);
+                this.setTranslateY(2564);
+                Game.gameRoot.setLayoutX(-1660);
+                Game.gameRoot.setLayoutY(-2024);
+            }
+
+
+            //SALLE 4 - SAUT GAUCHE -> SALLE 2
+            if (((this.getTranslateX() >= 3161) && (this.getTranslateX() <= 3216)) && ((this.getTranslateY()>= 2700) && (this.getTranslateY() <= 2745))) {
+                this.setTranslateX(2016);
+                this.setTranslateY(2159);
+                Game.gameRoot.setLayoutX(-(2016-340));
+                Game.gameRoot.setLayoutY(-(2159-540));
+            }
+
+            // --------------------------------------------------------------------
+
+            //SALLE 5 - SAUT DROIT - SOLUTION
+            if (((this.getTranslateX() >= 5108) && (this.getTranslateX() <= 5155)) && ((this.getTranslateY() >= 2662) && (this.getTranslateY() <= 2700))){
+                this.setTranslateX(4616);
+                this.setTranslateY(2159);
+                Game.gameRoot.setLayoutX(-(4616-340));
+                Game.gameRoot.setLayoutY(-(2159-540));
+            }
+
+           // SALLE 5 - HAUT -> SALLE 3
+            if (((this.getTranslateX() >= 4795) && (this.getTranslateX() <= 4879)) && ((this.getTranslateY() >= 2465) && (this.getTranslateY() <= 2485))){
+                 this.setTranslateX(3200);
+                this.setTranslateY(2024);
+                Game.gameRoot.setLayoutX(-(3200 - 340));
+                Game.gameRoot.setLayoutY(-(2024 - 540));
+            }
+
+
+            //SALLE 5 - BAS -> SALLE 4
+            if (((this.getTranslateX() >= 4784) && (this.getTranslateX() <= 4929)) && (this.getTranslateY() >= 2800)){
+                this.setTranslateX(3289);
+                this.setTranslateY(2789);
+                Game.gameRoot.setLayoutX(-(3289-340));
+                Game.gameRoot.setLayoutY(-(2789-540));
+            }
+
+
+            // ---------------------------------------------------------------------
+
+            //SALLE 6 - SAUT GAUCHE - SOLUTION
+            if (((this.getTranslateX() >= 4516) && (this.getTranslateX() <= 4581)) && ((this.getTranslateY() >= 2031) && (this.getTranslateY() <= 2070))){
+                this.setTranslateX(2900);
+                this.setTranslateY(1730);
+                Game.gameRoot.setLayoutX(-(2900-340));
+                Game.gameRoot.setLayoutY(-(1730-540));
+            }
+
+          //SALLE 6 - SAUT HAUT -> SALLE 1
+            if (((this.getTranslateX() >= 4706) && (this.getTranslateX() <= 4816)) && ((this.getTranslateY() >= 1875) && (this.getTranslateY() <= 2195))) {
+                this.setTranslateX(2000);
+                this.setTranslateY(2564);
+                Game.gameRoot.setLayoutX(-1660);
+                Game.gameRoot.setLayoutY(-2024);
+            }
+            //SALLE 6 - SAUT BAS -> SALLE 4
+            if (((this.getTranslateX() >= 4706) && (this.getTranslateX() <= 4816)) && ((this.getTranslateY() >= 2170) && (this.getTranslateY() <=2180))) {
+                this.setTranslateX(3289);
+                this.setTranslateY(2789);
+                Game.gameRoot.setLayoutX(-(3289 - 340));
+                Game.gameRoot.setLayoutY(-(2789 - 540));
+            }
 
             // 2eme étage
             //salle de base
