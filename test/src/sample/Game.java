@@ -180,7 +180,7 @@ public class Game extends Main {
     public void startGame() {
         initContent();
         gameMusic();
-        setText(1245,1400, "Des étoiles et une suites arithmétique");
+        setText(2660,1400, "Des étoiles et une suites arithmétique");
         setText(2530,160, "Vous avez gagné !");
         setText(1390,500, "Les étoiles vous montrent la voie");
 
