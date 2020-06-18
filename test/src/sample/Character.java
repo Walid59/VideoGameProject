@@ -562,8 +562,8 @@ public class Character extends Pane{
             if(this.getTranslateX()>4735 && this.getTranslateX()<4805 && this.getTranslateY()<=585 && this.getTranslateY()>=540){ //pas touche à cette ligne
                 this.setTranslateX(2500);
                 this.setTranslateY(100);
-                Game.gameRoot.setLayoutX(-2160);
-                Game.gameRoot.setLayoutY(440);
+		Game.gameRoot.setLayoutX(-2160);
+                Game.gameRoot.setLayoutY(20);
             }
 
             //TP HAUT DROITE
