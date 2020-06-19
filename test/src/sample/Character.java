@@ -10,14 +10,14 @@ import javafx.util.Duration;
 
 
 public class Character extends Pane{
-    Image marioImg = new Image(getClass().getResourceAsStream("/res/Game/mario.png"));
+    Image marioImg = new Image(getClass().getResourceAsStream("/res/Game/perso.png"));
     ImageView imageView = new ImageView(marioImg); //pour accéder à l'image avec les perso
     int count = 3; //+ count est élevé, + l'amplitude des gestes est grande
     int columns = 3; ///doit être ai dessis de 3
     int offsetX = 80; //abscisse sur le perso qu'on prend
     int offsetY = 22; //ordonnée sur le perso qu'on prend
-    int width = 19; //largeur qu'on prend sur la photo mario.png
-    int height = 28; //taille qu'on prend sur la photo mario.png
+    int width = 19; //largeur qu'on prend sur la photo perso.png
+    int height = 28; //taille qu'on prend sur la photo perso.png
     public SpriteAnimation animation;
     public Point2D playerVelocity = new Point2D(0,0);
     private boolean canJump = true;
@@ -36,7 +36,7 @@ public class Character extends Pane{
             for (Node platform : Game.platforms) {
                 if(this.getBoundsInParent().intersects(platform.getBoundsInParent())) {
                     if (movingRight) {
-                        if (this.getTranslateX() + Game.MARIO_SIZE == platform.getTranslateX()){
+                        if (this.getTranslateX() + Game.PERSO_SIZE == platform.getTranslateX()){
                             this.setTranslateX(this.getTranslateX() - 1);
                             return;
                         }
@@ -57,7 +57,7 @@ public class Character extends Pane{
             for(Block platform :Game.platforms){
                 if(getBoundsInParent().intersects(platform.getBoundsInParent())){
                     if(movingDown){
-                        if(this.getTranslateY()+ Game.MARIO_SIZE == platform.getTranslateY()){
+                        if(this.getTranslateY()+ Game.PERSO_SIZE == platform.getTranslateY()){
                             this.setTranslateY(this.getTranslateY()-1);
                             canJump = true;
                             return;
