@@ -78,7 +78,7 @@ public class Game extends Main {
                         Block plafondGauche = new Block(Block.BlockType.PLAFOND_GAUCHE, j * BLOCK_SIZE, i * BLOCK_SIZE);
                         break;
                     case '8':
-                        Block plafondDroit = new Block(Block.BlockType.PlAFOND_DROIT, j * BLOCK_SIZE, i * BLOCK_SIZE);
+                        Block plafondDroit = new Block(Block.BlockType.PLAFOND_DROIT, j * BLOCK_SIZE, i * BLOCK_SIZE);
                         break;
                     case '9':
                         Block platformM= new Block(Block.BlockType.PLATFORM_MILIEU, j * BLOCK_SIZE, i * BLOCK_SIZE);
