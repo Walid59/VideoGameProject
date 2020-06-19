@@ -26,7 +26,7 @@ public class Game extends Main {
 
     Image backgroundImg = new Image(getClass().getResourceAsStream("/res/Game/fond2.jpg"));
     public static final int BLOCK_SIZE = 45;
-    public static final int MARIO_SIZE = 45;
+    public static final int PERSO_SIZE = 45;
 
 
     public static Pane appRoot = new Pane();
@@ -172,6 +172,8 @@ public class Game extends Main {
         setText(2660,1420, "Des étoiles et une suite arithmétique");
         setText(2530,160, "Vous avez gagné !");
         setText(1390,500, "Les étoiles vous montrent la voie");
+        setText(150,2400, "Bienvenue dans la salle tutorielle, prendre le portail de droite pour commencer");
+        setText(2000,2750,"Toujours se fier aux runes");
 
 
         getScene().setOnKeyPressed(event -> keys.put(event.getCode(), true));
