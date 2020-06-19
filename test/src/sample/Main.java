@@ -31,7 +31,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws FileNotFoundException {
-        primaryStage.setTitle("Boumaragame");
+        primaryStage.setTitle("Maze Breaker");
         
         root.setId("pane");
 

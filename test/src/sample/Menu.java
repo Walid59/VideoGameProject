@@ -4,7 +4,6 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.effect.DropShadow;
-import javafx.scene.layout.Pane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaException;
 import javafx.scene.media.MediaPlayer;
@@ -32,7 +31,7 @@ public class Menu extends Main{
         // ------------------------START BUTTON----------------------
 
         //endroit où sera situé le bouton
-        start.setLayoutX((Main.getSceneWidth() / 2) - (MainMenuButton.getButtonWidth() / 2));
+        start.setLayoutX((Main.getSceneWidth() / 2.0) - (MainMenuButton.getButtonWidth() / 2.0));
         start.setLayoutY(200);
 
 
@@ -45,12 +44,12 @@ public class Menu extends Main{
         });
 
         //----------------------SETTINGS BUTTON----------------------
-        settings.setLayoutX((Main.getSceneWidth() / 2) - (MainMenuButton.getButtonWidth() / 2));
+        settings.setLayoutX((Main.getSceneWidth() / 2.0) - (MainMenuButton.getButtonWidth() / 2.0));
         settings.setLayoutY(300);
 
 
         //titre
-        Text title = new Text((Main.getSceneWidth() / 2.25),125,"Un jeu");
+        Text title = new Text((Main.getSceneWidth() / 3.2),125,"Maze Breaker");
         title.setFill(Color.WHITE);
         title.setFont(Font.loadFont(new FileInputStream("src/res/MenuButton/yoster.ttf"),50));
         root.getChildren().add(title);
@@ -62,9 +61,9 @@ public class Menu extends Main{
 
         Text walid = new Text(40,475,"Walid");
         Text guillaume = new Text(150,475,"Guillaume");
-        Text océane = new Text(625,475,"Océane");
+        Text oceane = new Text(625,475,"Océane");
         Text henri = new Text(775,475,"Henri");
-        Text[] texts = {walid, guillaume, henri, océane, credits};
+        Text[] texts = {walid, guillaume, henri, oceane, credits};
         for(Text t : texts){
             t.setFill(Color.WHITE);
             t.setFont(Font.loadFont(new FileInputStream("src/res/MenuButton/yoster.ttf"),23));

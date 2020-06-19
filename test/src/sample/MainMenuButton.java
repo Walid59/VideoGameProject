@@ -9,7 +9,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
-import java.awt.*;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
@@ -21,10 +20,6 @@ public class MainMenuButton extends Button {
 
     public static int getButtonWidth() {
         return BUTTON_WIDTH;
-    }
-
-    public static int getButtonHeight() {
-        return BUTTON_HEIGHT;
     }
 
     private final String FONT_PATH = "src/res/MenuButton/yoster.ttf";

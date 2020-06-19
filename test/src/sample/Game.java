@@ -1,8 +1,6 @@
 package sample;
 
 import javafx.animation.AnimationTimer;
-import javafx.application.Application;
-import javafx.scene.Scene;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -14,10 +12,6 @@ import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
-import javafx.scene.Group;
-import javafx.util.Duration;
-import javafx.event.ActionEvent;
 
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -135,12 +129,7 @@ public class Game extends Main {
             });
             gameRoot.getChildren().add(player);
             Main.root.getChildren().addAll(backgroundIV, gameRoot);
-/*
-            GameButton b = new GameButton(GameButton.ButtonType.WHITE,300,300);
-            GameButton c = new GameButton(GameButton.ButtonType.BLACK,350,300);
-            Main.root.getChildren().addAll(b,c);
 
- */
 
     }
 

@@ -573,11 +573,6 @@ public class Character extends Pane{
                 Game.gameRoot.setLayoutX(-1050);
                 Game.gameRoot.setLayoutY(-224);
             }
-           /* if ((this.getTranslateY()==1299) && (this.getTranslateX()>590)) {
-                this.setTranslateX(380);
-                this.setTranslateY(2050);
-                Game.gameRoot.setLayoutX(64);
-            }*/
 
         }
     }
