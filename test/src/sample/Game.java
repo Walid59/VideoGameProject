@@ -173,7 +173,9 @@ public class Game extends Main {
         setText(2530,160, "Vous avez gagné !");
         setText(1390,500, "Les étoiles vous montrent la voie");
         setText(150,2400, "Bienvenue dans la salle tutorielle, prendre le portail de droite pour commencer");
+        setText(150,2450,"utiliser les touches directionnelles pour se déplacer et sauter");
         setText(2000,2750,"Toujours se fier aux runes");
+
 
 
         getScene().setOnKeyPressed(event -> keys.put(event.getCode(), true));
