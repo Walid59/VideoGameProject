@@ -10,7 +10,7 @@ public class Block extends Pane {
     Image blocksImg = new Image(getClass().getResourceAsStream("/res/Game/essai3.png"));
     ImageView block;
     public enum BlockType {
-        SOL_GAUCHE, SOL_DROIT, SOL, SOL_COTE_GAUCHE, SOL_COTE_DROIT, EXTERIEUR, PLAFOND, PLAFOND_GAUCHE, PlAFOND_DROIT, PLATFORM_MILIEU, PLATFORM_GAUCHE, PLATFORM_DROIT, ETOILE1ROUGE,ETOILE2, ETOILE3BLEU, ETOILE4VERT, RUNE1, RUNE2, RUNE3
+        SOL_GAUCHE, SOL_DROIT, SOL, SOL_COTE_GAUCHE, SOL_COTE_DROIT, EXTERIEUR, PLAFOND, PLAFOND_GAUCHE, PLAFOND_DROIT, PLATFORM_MILIEU, PLATFORM_GAUCHE, PLATFORM_DROIT, ETOILE1ROUGE,ETOILE2, ETOILE3BLEU, ETOILE4VERT, RUNE1, RUNE2, RUNE3
     }
     public Block(BlockType blockType, int x, int y) {
 
@@ -41,7 +41,7 @@ public class Block extends Pane {
             case PLAFOND_GAUCHE:
                 block.setViewport(new Rectangle2D(240, 0, 29, 29));
                 break;
-            case PlAFOND_DROIT:
+            case PLAFOND_DROIT:
                 block.setViewport(new Rectangle2D(210, 0, 29, 29));
                 break;
             case PLATFORM_MILIEU:
