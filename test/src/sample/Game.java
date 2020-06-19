@@ -23,7 +23,6 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-//import static sample.mario.Button.ButtonType.ETEINT;
 
 
 public class Game extends Main {
@@ -31,10 +30,9 @@ public class Game extends Main {
     private HashMap<KeyCode,Boolean> keys = new HashMap<>();
 
 
-    Image backgroundImg = new Image(getClass().getResourceAsStream("/res/Game/fond4.jpg"));
+    Image backgroundImg = new Image(getClass().getResourceAsStream("/res/Game/fond2.jpg"));
     public static final int BLOCK_SIZE = 45;
     public static final int MARIO_SIZE = 45;
-    public static final int BOUTON1_SIZE = 40;
 
 
     public static Pane appRoot = new Pane();
@@ -103,13 +101,20 @@ public class Game extends Main {
                     case 'd':
                         Block etoile4= new Block(Block.BlockType.ETOILE4VERT, j * BLOCK_SIZE, i * BLOCK_SIZE);
                         break;
+                    case '*':
+                        Block runecote= new Block(Block.BlockType.RUNE1, j * BLOCK_SIZE, i * BLOCK_SIZE);
+                        break;
+                    case '+':
+                        Block runehaut= new Block(Block.BlockType.RUNE2, j * BLOCK_SIZE, i * BLOCK_SIZE);
+                        break;
+                    case '-':
+                        Block runebas = new Block(Block.BlockType.RUNE3, j * BLOCK_SIZE, i * BLOCK_SIZE);
                 }
             }
 
         }
 
             player = new Character();
-            //bouton = new Button(ETEINT, 64, 2000);
             player.setTranslateX(150); //pour gérer où va atterir le perso axe des abscisses
             player.setTranslateY(2780);//pour gérer où va atterir le perso axe des ordonnées (à partir de 799 -> problème)
             //IMPORTANT : code pour le background scrolling
@@ -175,7 +180,7 @@ public class Game extends Main {
     public void startGame() {
         initContent();
         gameMusic();
-        setText(2735,1210, "Suites arithmétiques");
+        setText(2660,1420, "Des étoiles et une suite arithmétique");
         setText(2530,160, "Vous avez gagné !");
         setText(1390,500, "Les étoiles vous montrent la voie");
 

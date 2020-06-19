@@ -7,10 +7,10 @@ import javafx.scene.layout.Pane;
 
 
 public class Block extends Pane {
-    Image blocksImg = new Image(getClass().getResourceAsStream("/res/Game/essai2.png"));
+    Image blocksImg = new Image(getClass().getResourceAsStream("/res/Game/essai3.png"));
     ImageView block;
     public enum BlockType {
-        SOL_GAUCHE, SOL_DROIT, SOL, SOL_COTE_GAUCHE, SOL_COTE_DROIT, EXTERIEUR, PLAFOND, PLAFOND_GAUCHE, PlAFOND_DROIT, PLATFORM_MILIEU, PLATFORM_GAUCHE, PLATFORM_DROIT, ETOILE1ROUGE,ETOILE2, ETOILE3BLEU, ETOILE4VERT, ETOILE5, LUNE
+        SOL_GAUCHE, SOL_DROIT, SOL, SOL_COTE_GAUCHE, SOL_COTE_DROIT, EXTERIEUR, PLAFOND, PLAFOND_GAUCHE, PlAFOND_DROIT, PLATFORM_MILIEU, PLATFORM_GAUCHE, PLATFORM_DROIT, ETOILE1ROUGE,ETOILE2, ETOILE3BLEU, ETOILE4VERT,LUNE, RUNE1, RUNE2, RUNE3
     }
     public Block(BlockType blockType, int x, int y) {
 
@@ -67,6 +67,15 @@ public class Block extends Pane {
                 break;
             case LUNE:
                 block.setViewport(new Rectangle2D(96,125,31,31));
+                break;
+            case RUNE1:
+                block.setViewport(new Rectangle2D(78,165,31,31));
+                break;
+            case RUNE2:
+                block.setViewport(new Rectangle2D(39,165,31,31));
+                break;
+            case RUNE3:
+                block.setViewport(new Rectangle2D(0,163,31,31));
                 break;
 
         }

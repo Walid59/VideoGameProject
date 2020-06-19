@@ -72,16 +72,34 @@ public class Character extends Pane{
                     }
                 }
             }
-            // A CHANGER
-            this.setTranslateY(this.getTranslateY() + (movingDown?1:-1));
-            if(this.getTranslateY()>2850){ //
+                        // BAS
+            this.setTranslateY(this.getTranslateY() + (movingDown ? 1 : -1));
+            if (this.getTranslateY() > 2850) { //pas touche à cette ligne
                 this.setTranslateX(100);
                 this.setTranslateY(2789);
                 Game.gameRoot.setLayoutX(240);
                 Game.gameRoot.setLayoutY(-2249);
             }
-            
-                        //Salle 1 - SAUT BAS
+            //SALLE TUTO - SAUTHAUT1
+            if ((this.getTranslateY() == 2425) && ((this.getTranslateX() > 711) && (this.getTranslateX() < 819))) {
+                this.setTranslateX(1200);
+                this.setTranslateY(2789);
+                Game.gameRoot.setLayoutX(-860);
+                Game.gameRoot.setLayoutY(-2249);
+            }
+
+            //SALLE TUTO - SAUTDROIT1
+            if ((this.getTranslateY()<= 2655 && this.getTranslateY()>=2510) && ((this.getTranslateX() >= 1249) && (this.getTranslateX() <= 1290))) {
+                this.setTranslateX(2000);
+                this.setTranslateY(2564);
+                Game.gameRoot.setLayoutX(-1660);
+                Game.gameRoot.setLayoutY(-2024);
+            }
+
+
+            // ------------------------------------------------------
+
+            //Salle 1 - SAUT BAS
             if ((this.getTranslateY() == 2670) && ((this.getTranslateX() >= 2061) && (this.getTranslateX() <= 2119))) {
                 this.setTranslateX(100);
                 this.setTranslateY(2789);
@@ -235,6 +253,9 @@ public class Character extends Pane{
                 Game.gameRoot.setLayoutY(-(2789 - 540));
             }
 
+
+	     
+		
             // 2eme étage
             //salle de base
             if(this.getTranslateX()>=2990 && this.getTranslateX()<=3045 && this.getTranslateY()<=1755 && this.getTranslateY()>=1599){ //pas touche à cette ligne
@@ -429,7 +450,7 @@ public class Character extends Pane{
 
             //Premiere salle
             //retour
-            if(this.getTranslateX()>1901 && this.getTranslateX()<1651 && this.getTranslateY()<=765 && this.getTranslateY()>=680){ //pas touche à cette ligne
+            if(this.getTranslateX()>1901 && this.getTranslateX()<1951 && this.getTranslateY()<=765 && this.getTranslateY()>=680){ //pas touche à cette ligne
                 this.setTranslateX(1390);
                 this.setTranslateY(764);
                 Game.gameRoot.setLayoutX(-1050);
@@ -541,8 +562,8 @@ public class Character extends Pane{
             if(this.getTranslateX()>4735 && this.getTranslateX()<4805 && this.getTranslateY()<=585 && this.getTranslateY()>=540){ //pas touche à cette ligne
                 this.setTranslateX(2500);
                 this.setTranslateY(100);
-                Game.gameRoot.setLayoutX(-2160);
-                Game.gameRoot.setLayoutY(440);
+		Game.gameRoot.setLayoutX(-2160);
+                Game.gameRoot.setLayoutY(20);
             }
 
             //TP HAUT DROITE
